@@ -1,0 +1,5 @@
+reports/
+test/
+.gemini/tmp/
+node_modules/
+.env
