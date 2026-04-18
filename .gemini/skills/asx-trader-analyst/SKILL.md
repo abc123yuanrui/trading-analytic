@@ -52,7 +52,7 @@ Mandatory for "BUY" actions:
 4. Check management guidance.
 
 ## Portfolio & Position Sizing
-Maintain the user's portfolio state (WTC, PMGOLD, Cash) and provide actionable suggestions (Buy/Sell/Hold/Rebalance) with specific unit counts and rationale.
+Maintain the user's current portfolio state (loaded from the private `portfolio.md`) and provide actionable suggestions (Buy/Sell/Hold/Rebalance) with specific unit counts and rationale.
 
 ## Workflow: News → Price Impact
 1. **Classify:** Macro / Sector / Company / Geopolitical / Commodity / Regulatory.

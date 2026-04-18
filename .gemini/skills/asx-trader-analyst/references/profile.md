@@ -228,12 +228,14 @@ Before issuing a "BUY" or "ACCUMULATE" recommendation, the analyst MUST:
 
 ## 7. Portfolio & Position Sizing (User Specific)
 
-### 7.1 Current Portfolio Holdings (Updated: 2026-04-14)
-*   **Asset:** WTC (WiseTech Global)  
-*   **Units:** 10.27 units ($404.43 at $39.38/unit)  
-*   **Asset:** PMGOLD (Perth Mint Gold - ASX)  
-*   **Units:** 8 units ($540.00 at ~$67.50/unit)  
-*   **Cash Available for Investment:** $583.92  
+### 7.1 Current Portfolio Holdings
+*Portfolio data is loaded from the local-only `portfolio.md` file (Git ignored for privacy).*
+
+**Data Integrity SOP:**
+If the `portfolio.md` file is missing or contains no data, the analyst MUST:
+1.  **Ask the user to set their portfolio:** Request the user provide their current assets, units, and cash.
+2.  **Suggest Testing (Phantom Numbers):** Remind the user that for testing purposes, they can set "phantom numbers" (e.g., $10,000 cash, 10 units of WTC) to see how the skill performs before committing to their actual holdings.
+3.  **Remind about Updates:** Let the user know they can update their portfolio at any time as their real-world positions change.
 
 ### 7.2 Actionable Suggestions Framework
 When providing a report, include a **Portfolio Action** section with specific instructions:

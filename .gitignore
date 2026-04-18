@@ -3,3 +3,4 @@ test/
 .gemini/tmp/
 node_modules/
 .env
+.gemini/skills/asx-trader-analyst/references/portfolio.md
