@@ -1,0 +1,4 @@
+Date,Ticker,Prediction_Type,Target_Price,Actual_Outcome_Price,Result,Causality_Category,Notes
+2026-04-26,WTC,Neutral/Bull,46.00,44.44,WAIT,Leadership Transition,Corrected baseline price after valuation reset.
+2026-04-26,BHP,Bull/Neutral,56.80,56.10,WAIT,Production Stability,Stable quarterly production offset by macro.
+2026-04-26,PMGOLD,Bull,71.50,67.66,WAIT,Geopolitical Hedge,Safe-haven bid strengthening.

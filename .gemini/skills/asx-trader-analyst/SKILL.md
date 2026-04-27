@@ -31,15 +31,46 @@ Identify strengthening themes (AI, energy transition, etc.) and perform multi-le
 - **Valuation:** DCF, Relative Multiples (P/E, EV/EBITDA), and NAV for miners.
 - **Financial Health:** ROIC (>12%), FCF Conversion (>80%), and Gearing (Net Debt/EBITDA < 2.5x).
 
+### Sentiment & Flow Analysis
+Track institutional movement via Form 603/604 (Substantial Holder notices) and monitor retail sentiment (HotCopper, Reddit) to identify crowded trades or capitulation signals.
+
+### Inter-market Correlation
+Analyze lead/lag relationships between ASX securities and global indicators:
+- **AUD/USD:** Impact on USD-earning exporters (BHP, CSL, RMD).
+- **Bond Yields:** Impact on high-PE growth/tech stocks (WTC, XRO).
+- **Commodities:** Real-time linkage between spot prices and miner performance.
+
+### Quantitative Risk & Hedging
+Apply data-driven risk management:
+- **Beta-Adjusted Sizing:** Factor in sector sensitivity during downturns.
+- **Volatility Scaling:** Use ASX VIX to adjust cash buffers and position sizes.
+- **Stop-Loss Discipline:** Mandatory "Invalidation Points" for all directional views.
+
 ## Standard Operating Procedures (SOPs)
 ### Reporting (Daily & Weekly)
 - **Live Market Data (Mandatory):** Before generating any report, the analyst MUST perform a `google_web_search` for the current day's price action.
-- **Price Verification Protocol:** Every price mentioned MUST include a "Source Check" (e.g., "BHP: $55.92 [Live Search]"). If the search result contradicts the internal memory or profile, the SEARCH RESULT takes absolute precedence. 
-- **Liquidity Deployment SOP:** ...
-- **Daily Report:** ...
-- **Daily Report:** `daily_report_YYYY-MM-DD.md`. Includes Prediction Review, Macro Snapshot, Sector Sentiment, Stock Predictions (Bull/Bear cases), and Portfolio Actions.
+- **Price Verification Protocol:** Every price mentioned MUST include a "Source Check" across at least two platforms (e.g., ASX Official and a major provider like Betashares for tech/ETFs). If the search result contradicts internal memory or profile peaks, the LIVE SEARCH RESULT and current platform prices take absolute precedence.
 - **As-At Reporting (Backcasting):** For a specific past date, ignore all data after that date to simulate decision-making. Prefix: `backcast_report_asat_YYYY-MM-DD.md`.
 - **Weekly Performance Audit:** Every Monday as a Jupyter Notebook (`weekly_report_YYYY-MM-DD.ipynb`). Includes performance scorecard, yield/loss analysis, and failure analysis (Post-Mortem).
+
+### Sentiment & Flow Mapping (SOP)
+On major price moves (>2%), check for:
+1.  **Form 603/604 Notices:** Identify institutional accumulation or distribution.
+2.  **Retail Sentiment:** Scan recent forums/socials for signs of "FOMO" or "Panic."
+3.  **Classification:** Label sentiment as *Euphoric / Neutral / Capitulation*.
+
+### Inter-market Calibration (SOP)
+Weekly review of ticker sensitivity to:
+1.  **AUD/USD:** High sensitivity for BHP/CSL.
+2.  **AU 10Y Yield:** High sensitivity for WTC/XRO/REITs.
+3.  **Commodity Spot:** High sensitivity for FMG (Iron Ore) / STO (Oil).
+
+### Risk Shield & Sizing (SOP)
+1.  **The Invalidation Rule:** Every "BUY" recommendation must include a "Hard Stop" price (approx. 5-8% below entry or at key support breach).
+2.  **VIX-Adjusted Sizing:**
+    - **ASX VIX < 15:** Full position sizing allowed.
+    - **ASX VIX 15-25:** Reduce new position sizing by 25%.
+    - **ASX VIX > 25:** Reduce new position sizing by 50% and increase cash buffer.
 
 ### Data Management (Performance Log)
 Maintain `performance_log.csv` in the root directory with columns: `Date, Ticker, Prediction_Type, Target_Price, Actual_Outcome_Price, Result (HIT/MISS/WAIT), Causality_Category, Notes`.
